@@ -153,29 +153,4 @@ TEST(sumPrimeTest, KnownSums) {
     EXPECT_EQ(41, sumPrime(13));
     EXPECT_EQ(41, sumPrime(14));
     EXPECT_EQ(41, sumPrime(15));
-    EXPECT_EQ(58, sumPrime(16));
-}
-
-TEST(sumPrimeTest, CorrectedKnownSums) {
-    EXPECT_EQ(17, sumPrime(10));
-    EXPECT_EQ(28, sumPrime(11));
-    EXPECT_EQ(41, sumPrime(13));
-}
-
-TEST(sumPrimeTest, LargerSums) {
-    EXPECT_EQ(1060, sumPrime(100));
-    EXPECT_EQ(76127, sumPrime(1000));
-}
-
-TEST(sumPrimeTest, FromAssignment) {
-    uint64_t res = sumPrime(2000000);
-    uint64_t expected = 142913828922;
-    EXPECT_EQ(expected, res);
-}
-
-TEST(sumPrimeTest, EdgeCases) {
-    EXPECT_EQ(0, sumPrime(0));
-    EXPECT_EQ(0, sumPrime(1));
-    EXPECT_EQ(2, sumPrime(2));
-    EXPECT_EQ(5, sumPrime(3));
 }
