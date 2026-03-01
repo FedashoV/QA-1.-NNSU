@@ -146,7 +146,7 @@ TEST(sumPrimeTest, SmallSums) {
 }
 
 TEST(sumPrimeTest, KnownSums) {
-    EXPECT_EQ(17, sumPrime(10));  
+    EXPECT_EQ(17, sumPrime(10));
     EXPECT_EQ(28, sumPrime(12));
     EXPECT_EQ(41, sumPrime(14));
     EXPECT_EQ(58, sumPrime(16));
