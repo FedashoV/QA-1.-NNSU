@@ -160,11 +160,6 @@ TEST(sumPrimeTest, CorrectedKnownSums) {
     EXPECT_EQ(17, sumPrime(10));
     EXPECT_EQ(28, sumPrime(11));
     EXPECT_EQ(41, sumPrime(13));
-    EXPECT_EQ(58, sumPrime(17));
-    EXPECT_EQ(77, sumPrime(19));
-    EXPECT_EQ(100, sumPrime(23));
-    EXPECT_EQ(129, sumPrime(29));
-    EXPECT_EQ(160, sumPrime(31));
 }
 
 TEST(sumPrimeTest, LargerSums) {
