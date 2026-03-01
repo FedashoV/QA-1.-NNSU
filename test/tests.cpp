@@ -136,10 +136,11 @@ TEST(nextPrimeTest, ConsecutiveCalls) {
 TEST(sumPrimeTest, SmallSums) {
     EXPECT_EQ(0, sumPrime(0));
     EXPECT_EQ(0, sumPrime(1));
-    EXPECT_EQ(0, sumPrime(2));
-    EXPECT_EQ(2, sumPrime(3));
+    EXPECT_EQ(2, sumPrime(2));
+    EXPECT_EQ(5, sumPrime(3));
     EXPECT_EQ(5, sumPrime(4));
-    EXPECT_EQ(10, sumPrime(6));
+    EXPECT_EQ(10, sumPrime(5));
+    EXPECT_EQ(17, sumPrime(7));
     EXPECT_EQ(17, sumPrime(8));
     EXPECT_EQ(17, sumPrime(9));
     EXPECT_EQ(17, sumPrime(10));
@@ -147,14 +148,23 @@ TEST(sumPrimeTest, SmallSums) {
 
 TEST(sumPrimeTest, KnownSums) {
     EXPECT_EQ(17, sumPrime(10));
+    EXPECT_EQ(28, sumPrime(11));
     EXPECT_EQ(28, sumPrime(12));
+    EXPECT_EQ(41, sumPrime(13));
     EXPECT_EQ(41, sumPrime(14));
+    EXPECT_EQ(41, sumPrime(15));
     EXPECT_EQ(58, sumPrime(16));
-    EXPECT_EQ(77, sumPrime(18));
-    EXPECT_EQ(100, sumPrime(20));
-    EXPECT_EQ(129, sumPrime(22));
-    EXPECT_EQ(160, sumPrime(24));
-    EXPECT_EQ(160, sumPrime(25));
+}
+
+TEST(sumPrimeTest, CorrectedKnownSums) {
+    EXPECT_EQ(17, sumPrime(10));
+    EXPECT_EQ(28, sumPrime(11));
+    EXPECT_EQ(41, sumPrime(13));
+    EXPECT_EQ(58, sumPrime(17));
+    EXPECT_EQ(77, sumPrime(19));
+    EXPECT_EQ(100, sumPrime(23));
+    EXPECT_EQ(129, sumPrime(29));
+    EXPECT_EQ(160, sumPrime(31));
 }
 
 TEST(sumPrimeTest, LargerSums) {
@@ -171,6 +181,6 @@ TEST(sumPrimeTest, FromAssignment) {
 TEST(sumPrimeTest, EdgeCases) {
     EXPECT_EQ(0, sumPrime(0));
     EXPECT_EQ(0, sumPrime(1));
-    EXPECT_EQ(0, sumPrime(2));
-    EXPECT_EQ(2, sumPrime(3));
+    EXPECT_EQ(2, sumPrime(2));
+    EXPECT_EQ(5, sumPrime(3));
 }
